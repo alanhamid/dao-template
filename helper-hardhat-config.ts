@@ -15,7 +15,11 @@ export const networkConfig: networkConfigInfo = {
   kovan: {
     blockConfirmations: 6,
   },
+  mumbai: {
+    blockConfirmations: 6,
+  },
 }
+
 
 export const developmentChains = ["hardhat", "localhost"]
 export const proposalsFile = "proposals.json"
