@@ -18,6 +18,9 @@ export const networkConfig: networkConfigInfo = {
   mumbai: {
     blockConfirmations: 6,
   },
+  polygon: {
+    blockConfirmations: 6,
+  },
 }
 
 

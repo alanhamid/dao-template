@@ -12,9 +12,12 @@ const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY || ""
 const RINKEBY_RPC_URL =
   process.env.RINKEBY_RPC_URL || "https://eth-rinkeby.alchemyapi.io/v2/your-api-key"  
   const MUMBAI_RPC_URL = process.env.MUMBAI_RPC_URL
-  
+  //###################################################
+  const POLYGON_RPC_URL = process.env.POLYGON_RPC_URL
+  //
+  //###################################################
 const PRIVATE_KEY = process.env.PRIVATE_KEY || "privatKey"
-const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY || ""
+const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY || "" 
 
 const config: HardhatUserConfig = {
   defaultNetwork: "hardhat",
@@ -36,6 +39,11 @@ const config: HardhatUserConfig = {
       url: MUMBAI_RPC_URL,
       accounts: [PRIVATE_KEY],
       chainId: 80001,
+    },
+    polygon: {
+      url: POLYGON_RPC_URL,
+      accounts: [PRIVATE_KEY],
+      chainId: 137,
     },
   },
   solidity: {
